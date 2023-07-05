@@ -98,7 +98,7 @@ services:
       - db:database
     command: bash -c "bin/blockscout eval \"Elixir.Explorer.ReleaseTasks.create_and_migrate()\" && bin/blockscout start"
     env_file:
-      -  ./blockscount/common-blockscout.env
+      -  ./common-blockscout.env
     environment:
         ETHEREUM_JSONRPC_VARIANT: 'geth'
         ETHEREUM_JSONRPC_HTTP_URL: http://geth-rpc-endpoint:8545
